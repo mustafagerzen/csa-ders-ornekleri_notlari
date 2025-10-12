@@ -1,0 +1,51 @@
+public class Car1 {
+    // Attributes
+    private String name;
+    private String bodyColor;
+    private int maxSpeed = 300;
+    private int doorNumber = 2;
+    private boolean isManual = true;
+    private float width = 1.8f;
+    private float length = 3.8f;
+    private float height = 1.5f;
+
+    // Constructor
+    public Car1(String name, String bodyColor) {
+        this.name = name;
+        this.bodyColor = bodyColor;
+    }
+
+    // Methods
+    public void forward() {
+        System.out.println(name + " drives forward.");
+    }
+
+    public void backward() {
+        System.out.println(name + " drives backward.");
+    }
+
+    public void turnLeft() {
+        System.out.println(name + " turns left.");
+    }
+
+    public void turnRight() {
+        System.out.println(name + " turns right.");
+    }
+
+    public void accelerate() {
+        System.out.println(name + " accelerates.");
+    }
+
+    public void brake() {
+        System.out.println(name + " brakes.");
+    }
+
+    public void forward(int speed) {
+        System.out.println(name + " moves forward at " + speed + " km/h.");
+    }
+
+    public void backward(int speed) {
+        System.out.println(name + " moves backward at " + speed + " km/h.");
+    }
+}
+
