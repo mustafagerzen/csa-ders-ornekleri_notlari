@@ -1,0 +1,70 @@
+public class Shape
+{
+    private double width;
+    private double height;
+    private double radius;
+    private boolean saveRatio;
+    private double rationum;
+    
+    public ShapeMaker(double side){
+        width = side;
+        height = side;
+    }
+    public ShapeMaker(double s1, double s2, boolean sR){
+        width = s1;
+        height = s2;
+        saveRatio = sR;
+        rationum = s1/s2;
+        
+    }
+    public ShapeMaker(double radi){
+        radius = radi;
+        
+    }
+    //widht get and set
+    public void setWidth(double wid){
+    if (saveRatio){
+        width = wid;
+        height = wid / rationum;
+    }
+    else{
+        width = wid;
+        saveRatio = width/height;
+    }
+    }    
+    
+    public double getWidth(){
+        return width;
+    }
+    //Height get and set
+    public void setHeight(double h){
+    if(saveRatio){
+        height = h;
+        width = h * rationum;
+    }
+    else{
+        height =h;
+        saveRatio = width/height;
+    }
+    }
+    public double getHeight(){
+        return height;
+    }
+    //radius get and set
+    public void setRadius(double r){
+        radius = r;
+    }
+    public  double getRadius(){
+        return radius;
+    }
+
+
+
+
+    public static void main(String[] args)
+    {
+    ShapeMaker circ = new Circle(5.0);
+    ShapeMaker rect = new rectangule(5.0, 8.0);
+    ShapeMaker kare = new square(3.0);
+    }
+}
